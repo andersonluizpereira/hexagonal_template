@@ -1,4 +1,4 @@
-package com.comunidade.app.application.core.ports.in;
+package com.comunidade.app.application.ports.in;
 
 import com.comunidade.app.application.core.domain.Customer;
 

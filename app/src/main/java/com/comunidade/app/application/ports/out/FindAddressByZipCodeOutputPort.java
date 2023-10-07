@@ -1,4 +1,4 @@
-package com.comunidade.app.application.core.ports.out;
+package com.comunidade.app.application.ports.out;
 
 import com.comunidade.app.application.core.domain.Address;
 

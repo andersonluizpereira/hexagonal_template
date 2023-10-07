@@ -1,4 +1,4 @@
-package com.comunidade.app.application.core.ports.in;
+package com.comunidade.app.application.ports.in;
 
 public interface DeleteCustomerByIdInputPort {
     void delete(String id);
