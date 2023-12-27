@@ -45,27 +45,83 @@ A arquitetura hexagonal é uma abordagem que enfatiza a separação de preocupa�
 Nossa estrutura.
 
 ````
-└───app
-└───src
-├───main
-│   ├───java
-│   │   └───com
-│   │       └───comunidade
-│   │           └───app
-│   │               ├───adapters
-│   │               │   ├───in
-│   │               │   └───out
-│   │               ├───application
-│   │               │   ├───core
-│   │               │   │   ├───domain
-│   │               │   │   └───usecase
-│   │               │   └───ports
-│   │               │       ├───in
-│   │               │       └───out
-│   │               └───config
-│   └───resources
-│       ├───static
-│       └───templates
+Estrutura do projeto
+── src
+    ├── main
+    ├── java
+    └── com
+        └── comunidade
+            └── app
+                ├── AppApplication.java
+                ├── adapters
+                ├── in
+                ├── consumer
+                ├── ReceiveValidatedCpfConsumer.java
+                ├── mapper
+                └── CustomerMessageMapper.java
+                └── message
+                    └── CustomerMessage.java
+                └── controller
+                    ├── CustomerController.java
+                    ├── mapper
+                    └── CustomerMapper.java
+                    ├── request
+                    └── CustomerRequest.java
+                    └── response
+                        ├── AddressResponse.java
+                        └── CustomerResponse.java
+                └── out
+                    ├── DeleteCustomerByIdAdapter.java
+                    ├── FindAddressByZipCodeAdapter.java
+                    ├── FindCustomerByIdAdapter.java
+                    ├── InsertCustomerAdapter.java
+                    ├── SendCpfForValidationAdapter.java
+                    ├── UpdateCustomerAdapter.java
+                    ├── client
+                    ├── FindAddressByZipCodeClient.java
+                    ├── mapper
+                    └── AddressResponseMapper.java
+                    └── response
+                        └── AddressResponse.java
+                    └── repository
+                        ├── CustomerRepository.java
+                        ├── entity
+                        ├── AddressEntity.java
+                        └── CustomerEntity.java
+                        └── mapper
+                            └── CustomerEntityMapper.java
+                ├── application
+                ├── core
+                ├── domain
+                ├── Address.java
+                └── Customer.java
+                └── usecase
+                    ├── DeleteCustomerByIdUseCase.java
+                    ├── FindCustomerByIdUseCase.java
+                    ├── InsertCustomerUseCase.java
+                    └── UpdateCustomerUseCase.java
+                └── ports
+                    ├── in
+                    ├── DeleteCustomerByIdInputPort.java
+                    ├── FindCustomerByIdInputPort.java
+                    ├── InsertCustomerInputPort.java
+                    └── UpdateCustomerInputPort.java
+                    └── out
+                        ├── DeleteCustomerByIdOutputPort.java
+                        ├── FindAddressByZipCodeOutputPort.java
+                        ├── FindCustomerByIdOutputPort.java
+                        ├── InsertCustomerOutputPort.java
+                        ├── SendCpfForValidationOutputPort.java
+                        └── UpdateCustomerOutputPort.java
+                └── config
+                    ├── DeleteCustomerByIdConfig.java
+                    ├── FindCustomerByIdConfig.java
+                    ├── InsertCustomerConfig.java
+                    ├── KafkaConsumerConfig.java
+                    ├── KafkaProducerConfig.java
+                    └── UpdateCustomerConfig.java
+    └── resources
+        └── application.yml
 └───test
    └───java
       └───com

@@ -1,7 +1,8 @@
 package com.comunidade.app.adapters.out.repository;
 
 import com.comunidade.app.adapters.out.repository.entity.CustomerEntity;
-import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.repository.CrudRepository;
 
-public interface CustomerRepository extends MongoRepository<CustomerEntity, String> {
+public interface CustomerRepository extends
+        CrudRepository<CustomerEntity, String> {
 }

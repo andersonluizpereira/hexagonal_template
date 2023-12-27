@@ -4,7 +4,6 @@ import com.comunidade.app.application.core.domain.Customer;
 import com.comunidade.app.application.ports.in.InsertCustomerInputPort;
 import com.comunidade.app.application.ports.out.FindAddressByZipCodeOutputPort;
 import com.comunidade.app.application.ports.out.InsertCustomerOutputPort;
-import com.comunidade.app.application.ports.out.SendCpfForValidationOutputPort;
 
 public class InsertCustomerUseCase implements InsertCustomerInputPort {
 

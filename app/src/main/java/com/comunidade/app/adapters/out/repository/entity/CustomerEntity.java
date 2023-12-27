@@ -1,11 +1,15 @@
 package com.comunidade.app.adapters.out.repository.entity;
 
-import lombok.Data;
+import lombok.*;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 
 @Data
-@Document(collection = "customers")
+@Builder
+@EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
+@DynamoDbBean
 public class CustomerEntity {
 
     @Id
